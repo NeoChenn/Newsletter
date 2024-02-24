@@ -1,0 +1,92 @@
+:root{
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+body{
+    background-color: var(--Charcoal-Grey);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--White);
+    padding: 1rem;
+    border-radius: 2rem;
+}
+.containerContent{
+    display: flex;
+    flex-direction: column;
+    max-width: 21rem;
+    padding: 3rem;
+    justify-content: start;
+    align-items: start;
+}
+h1{
+    font-size: 3.3rem;
+    color: var(--Dark-Slate-Grey);
+    margin-bottom: -0.1px;
+    margin-top: -1rem;
+}
+ul {
+    list-style-image: url("images/icon-list.svg");
+    margin-left: -0.5rem;
+    margin-top: -0.5rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: -0.8rem;
+    color: var(--Dark-Slate-Grey);
+    font-weight: 900;
+}
+input[type="text"]{
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width:18rem;
+}
+
+input[type="submit"]{
+    transition-property:background-color;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+    padding: 1rem 0rem;
+    border-radius: 0.5rem;
+    border-color: transparent;
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    font-weight: bold;
+}
+input[type="submit"]:hover{
+    transition-property:background-color, box-shadow;
+    background-color: var(--Tomato);
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+    box-shadow: 0px 10px 20px var(--Tomato);
+}
+input[type="text"]:hover{
+    cursor: pointer;
+}
+
+input[type="text"]:focus{
+    background-color: white;
+    border-color: white;
+    color: white;
+}
+
+span{
+    color: var(--Tomato);
+    visibility: hidden;
+}
